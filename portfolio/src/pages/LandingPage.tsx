@@ -1,7 +1,7 @@
 import DylanPic from "../assets/MePic.png";
-import NavbarLinks from "./NavbarLinks";
+import NavbarLinks from "../components/NavbarLinks";
 
-export const Navbar = () => {
+export const LandingPage = () => {
   return (
     <div className="relative min-h-screen bg-gray-200 font-sans">
       <div className="absolute inset-0 bg-black [clip-path:polygon(45%_0,_100%_0,_100%_100%,_35%_100%)]"></div>
@@ -20,6 +20,7 @@ export const Navbar = () => {
               <a
                 href="https://github.com/lewisengr"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="grid h-16 w-16 place-items-center rounded-xl bg-gray-300 text-gray-700 transition-colors hover:bg-gray-400"
               >
                 <svg
@@ -36,6 +37,7 @@ export const Navbar = () => {
               <a
                 href="https://www.linkedin.com/in/dylanlewisswe"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="grid h-16 w-16 place-items-center rounded-md bg-gray-300 text-gray-700 transition-colors hover:bg-gray-400"
               >
                 <svg
@@ -51,6 +53,7 @@ export const Navbar = () => {
               <a
                 href="mailto:disneydylan1@gmail.com"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="grid h-16 w-16 place-items-center rounded-md bg-gray-300 text-gray-700 transition-colors hover:bg-gray-400"
               >
                 <svg
