@@ -8,8 +8,7 @@ export const Navbar = () => {
 
       <div className="relative grid min-h-screen grid-cols-1 md:grid-cols-2">
         <div className="flex flex-col justify-center p-8 md:p-24">
-          <div className="max-w-md absolute top-60">
-            <p className="text-3xl text-gray-800 font-semibold mb-2">Hi, I'm</p>
+          <div className="max-w-md absolute top-65">
             <h1 className="text-6xl md:text-7xl font-bold text-black">
               Dylan Lewis
             </h1>
