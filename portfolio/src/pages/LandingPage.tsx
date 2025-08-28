@@ -1,7 +1,11 @@
 import DylanPic from "../assets/MePic.png";
 import NavbarLinks from "../components/NavbarLinks";
 
-export const LandingPage = () => {
+interface LandingPageProps {
+  onLinkClick: (sectionId: string) => void;
+}
+
+export const LandingPage = ({ onLinkClick }: LandingPageProps) => {
   return (
     <div className="relative min-h-screen bg-gray-200 font-sans">
       <div className="absolute inset-0 bg-black [clip-path:polygon(45%_0,_100%_0,_100%_100%,_35%_100%)]"></div>
@@ -71,7 +75,7 @@ export const LandingPage = () => {
         </div>
 
         <div className="relative flex flex-col items-center">
-          <NavbarLinks />
+          <NavbarLinks onLinkClick={onLinkClick} />
           <div className="flex h-full w-full items-end">
             <img
               src={DylanPic}

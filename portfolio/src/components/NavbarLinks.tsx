@@ -1,33 +1,52 @@
-import { Link } from "react-router-dom";
+import React from "react";
 
 const navLinks = [
-  { path: "/about-me", label: "About Me" },
-  { path: "/skills", label: "Skills" },
-  { path: "/portfolio", label: "Portfolio" },
+  { id: "about-me", label: "About Me" },
+  { id: "skills", label: "Skills" },
+  { id: "portfolio", label: "Portfolio" },
 ];
 
-function NavbarLinks() {
+type NavbarLinksProps = {
+  onLinkClick?: (sectionId: string) => void;
+};
+
+const NavbarLinks = ({ onLinkClick }: NavbarLinksProps) => {
+  const handleClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    sectionId: string
+  ) => {
+    e.preventDefault();
+    if (onLinkClick) {
+      onLinkClick(sectionId);
+    }
+  };
+
   return (
     <nav className="absolute top-5 right-10 z-10 p-10 text-xl">
       <ul className="flex items-center space-x-6 text-white gap-6 font-semibold">
         {navLinks.map((link) => (
-          <li key={link.path}>
-            <Link to={link.path} className="hover:text-gray-300">
+          <li key={link.id}>
+            <a
+              href={`#${link.id}`}
+              onClick={(e) => handleClick(e, link.id)}
+              className="hover:text-gray-300 cursor-pointer"
+            >
               {link.label}
-            </Link>
+            </a>
           </li>
         ))}
         <li>
-          <Link
-            to="/contact-info"
-            className="rounded-3xl bg-white px-6 py-3 font-bold text-black hover:bg-gray-200"
+          <a
+            href="#contact"
+            onClick={(e) => handleClick(e, "contact")}
+            className="rounded-full border-2 border-white px-4 py-2 hover:bg-white hover:text-black transition-colors"
           >
             CONTACT ME
-          </Link>
+          </a>
         </li>
       </ul>
     </nav>
   );
-}
+};
 
 export default NavbarLinks;
