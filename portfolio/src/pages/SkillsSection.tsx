@@ -88,14 +88,14 @@ const personalSkills = [
 
 const SkillCard = ({ name, imgSrc }: { name: string; imgSrc: string }) => (
   <div className="flex flex-col items-center justify-center gap-4">
-    <div className="w-24 h-24">
+    <div className="w-32 h-32">
       <img
         src={imgSrc}
         alt={`${name} logo`}
         className="object-contain w-full h-full"
       />
     </div>
-    <p className="text-lg font-semibold text-gray-800">{name}</p>
+    <p className="text-2xl font-semibold text-gray-800">{name}</p>
   </div>
 );
 
@@ -106,8 +106,8 @@ export const SkillsSection = forwardRef<HTMLDivElement>((_props, ref) => {
       className="relative bg-gray-200 font-sans flex flex-col items-center justify-center px-8"
     >
       <div className="w-full max-w-5xl mx-auto text-center">
-        <div className="mb-20">
-          <h2 className="inline-block border-2 border-black px-12 py-3 text-2xl font-semibold tracking-widest mb-16">
+        <div className="mb-20 py-8">
+          <h2 className="inline-block border-2 border-black px-12 py-3 text-3xl font-semibold tracking-widest mb-16">
             SKILLS
           </h2>
 
@@ -120,7 +120,7 @@ export const SkillsSection = forwardRef<HTMLDivElement>((_props, ref) => {
               />
             ))}
           </div>
-          <div className="w-24 h-px bg-gray-400 mx-auto my-12"></div>
+          <div className="w-48 h-px bg-gray-400 mx-auto my-12"></div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-8">
             {personalSkills.map((skill) => (
               <SkillCard
