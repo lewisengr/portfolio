@@ -6,6 +6,9 @@ import { aboutMeData } from "./components/AboutMeTxtDesc";
 import { InfoSectionDesc } from "./pages/InfoSectionDesc";
 import { InfoSectionFull } from "./pages/InfoSectionFull";
 import { SkillsSection } from "./pages/SkillsSection";
+import { PortfolioPage } from "./pages/PortfolioPage";
+import { ContactPage } from "./pages/ContactPage";
+import { Footer } from "./components/Footer";
 
 function App() {
   const aboutRefDesc = useRef<HTMLDivElement>(null);
@@ -40,8 +43,9 @@ function App() {
       <InfoSectionDesc ref={aboutRefDesc} {...aboutMeData} />
       <InfoSectionFull />
       <SkillsSection ref={skillsRef} />
-      {/* <PortfolioSection ref={portfolioRef} /> */}
-      {/* <ContactSection ref={contactRef} /> */}
+      <PortfolioPage ref={portfolioRef} />
+      <ContactPage ref={contactRef} />
+      <Footer />
     </BrowserRouter>
   );
 }
