@@ -1,4 +1,4 @@
-import DylanPic from "../assets/MePic.png";
+import DylanPic from "../assets/me-pic.png";
 import NavbarLinks from "../components/NavbarLinks";
 
 interface LandingPageProps {

@@ -1,72 +1,88 @@
 import { forwardRef } from "react";
+import javaimg from "../assets/java-img.png";
+import csharpimg from "../assets/csharp-img.png";
+import JSimg from "../assets/js-img.png";
+import TSimg from "../assets/ts-img.png";
+import HTMLimg from "../assets/html-img.png";
+import CSSimg from "../assets/css-img.png";
+import Reactimg from "../assets/react-img.png";
+import Viteimg from "../assets/vite-img.png";
+import Gitimg from "../assets/git-img.png";
+import Figmaimg from "../assets/figma-img.png";
+import Azureimg from "../assets/azure-img.png";
+import DotNetimg from "../assets/dotnet-img.png";
+import Chessimg from "../assets/chess-img.png";
+import Weightliftingimg from "../assets/weightlifting-img.png";
+import Basketballimg from "../assets/basketball-img.png";
+import Stocksimg from "../assets/stocks-img.png";
 
 const technicalSkills = [
   {
     name: "Java",
-    imgSrc: "https://placehold.co/100x100/E2E8F0/A0AEC0?text=Logo",
+    imgSrc: javaimg,
   },
   {
     name: "C#",
-    imgSrc: "https://placehold.co/100x100/E2E8F0/A0AEC0?text=Logo",
+    imgSrc: csharpimg,
   },
   {
     name: "JavaScript",
-    imgSrc: "https://placehold.co/100x100/E2E8F0/A0AEC0?text=Logo",
+    imgSrc: JSimg,
   },
   {
     name: "TypeScript",
-    imgSrc: "https://placehold.co/100x100/E2E8F0/A0AEC0?text=Logo",
+    imgSrc: TSimg,
   },
   {
     name: "HTML",
-    imgSrc: "https://placehold.co/100x100/E2E8F0/A0AEC0?text=Logo",
+    imgSrc: HTMLimg,
   },
   {
     name: "CSS",
-    imgSrc: "https://placehold.co/100x100/E2E8F0/A0AEC0?text=Logo",
+    imgSrc: CSSimg,
   },
   {
     name: "React",
-    imgSrc: "https://placehold.co/100x100/E2E8F0/A0AEC0?text=Logo",
+    imgSrc: Reactimg,
   },
   {
     name: "Vite",
-    imgSrc: "https://placehold.co/100x100/E2E8F0/A0AEC0?text=Logo",
+    imgSrc: Viteimg,
   },
   {
     name: "Git",
-    imgSrc: "https://placehold.co/100x100/E2E8F0/A0AEC0?text=Logo",
+    imgSrc: Gitimg,
   },
   {
     name: "Figma",
-    imgSrc: "https://placehold.co/100x100/E2E8F0/A0AEC0?text=Logo",
+    imgSrc: Figmaimg,
   },
   {
     name: "Azure",
-    imgSrc: "https://placehold.co/100x100/E2E8F0/A0AEC0?text=Logo",
+    imgSrc: Azureimg,
   },
   {
     name: ".NET",
-    imgSrc: "https://placehold.co/100x100/E2E8F0/A0AEC0?text=Logo",
+    imgSrc: DotNetimg,
   },
 ];
 
 const personalSkills = [
   {
     name: "Chess",
-    imgSrc: "https://placehold.co/100x100/E2E8F0/A0AEC0?text=Logo",
+    imgSrc: Chessimg,
   },
   {
     name: "Weightlifting",
-    imgSrc: "https://placehold.co/100x100/E2E8F0/A0AEC0?text=Logo",
+    imgSrc: Weightliftingimg,
   },
   {
     name: "Basketball",
-    imgSrc: "https://placehold.co/100x100/E2E8F0/A0AEC0?text=Logo",
+    imgSrc: Basketballimg,
   },
   {
     name: "Investing",
-    imgSrc: "https://placehold.co/100x100/E2E8F0/A0AEC0?text=Logo",
+    imgSrc: Stocksimg,
   },
 ];
 
@@ -131,8 +147,8 @@ export const InfoSectionFull = forwardRef<HTMLDivElement>((_props, ref) => {
           </div>
         </div>
 
-        <div>
-          <h2 className="inline-block border-2 border-black px-10 py-3 text-2xl font-semibold tracking-widest">
+        <div className="mt-20">
+          <h2 className="inline-block border-2 border-black px-12 py-3 text-2xl font-semibold tracking-widest mb-16">
             SKILLS
           </h2>
 
@@ -145,9 +161,7 @@ export const InfoSectionFull = forwardRef<HTMLDivElement>((_props, ref) => {
               />
             ))}
           </div>
-
           <div className="w-24 h-px bg-gray-400 mx-auto my-12"></div>
-
           <div className="grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-8">
             {personalSkills.map((skill) => (
               <SkillCard
