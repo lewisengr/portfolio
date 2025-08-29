@@ -1,7 +1,7 @@
 import React from "react";
 
 const navLinks = [
-  { id: "about-me", label: "About Me" },
+  { id: "about-me-desc", label: "About Me" },
   { id: "skills", label: "Skills" },
   { id: "portfolio", label: "Portfolio" },
 ];

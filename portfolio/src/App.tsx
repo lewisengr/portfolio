@@ -5,9 +5,10 @@ import { LandingPage } from "./pages/LandingPage";
 import { aboutMeData } from "./components/AboutMeTxtDesc";
 import { InfoSectionDesc } from "./pages/InfoSectionDesc";
 import { InfoSectionFull } from "./pages/InfoSectionFull";
+import { SkillsSection } from "./pages/SkillsSection";
 
 function App() {
-  const aboutRef = useRef<HTMLDivElement>(null);
+  const aboutRefDesc = useRef<HTMLDivElement>(null);
   const skillsRef = useRef<HTMLDivElement>(null);
   const portfolioRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
@@ -15,8 +16,8 @@ function App() {
   const handleScroll = (sectionId: string) => {
     let ref;
     switch (sectionId) {
-      case "about-me":
-        ref = aboutRef;
+      case "about-me-desc":
+        ref = aboutRefDesc;
         break;
       case "skills":
         ref = skillsRef;
@@ -36,9 +37,9 @@ function App() {
   return (
     <BrowserRouter>
       <LandingPage onLinkClick={handleScroll} />
-      <InfoSectionDesc ref={aboutRef} {...aboutMeData} />
-      <InfoSectionFull ref={skillsRef} />
-      {/* <SkillsSection ref={skillsRef} /> */}
+      <InfoSectionDesc ref={aboutRefDesc} {...aboutMeData} />
+      <InfoSectionFull />
+      <SkillsSection ref={skillsRef} />
       {/* <PortfolioSection ref={portfolioRef} /> */}
       {/* <ContactSection ref={contactRef} /> */}
     </BrowserRouter>
