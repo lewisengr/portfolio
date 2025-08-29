@@ -37,7 +37,7 @@ function App() {
     <BrowserRouter>
       <LandingPage onLinkClick={handleScroll} />
       <InfoSectionDesc ref={aboutRef} {...aboutMeData} />
-      <InfoSectionFull />
+      <InfoSectionFull ref={skillsRef} />
       {/* <SkillsSection ref={skillsRef} /> */}
       {/* <PortfolioSection ref={portfolioRef} /> */}
       {/* <ContactSection ref={contactRef} /> */}
