@@ -18,6 +18,7 @@ jobs:
         run: |
           npm install
           npm run build
+        working-directory: ./frontend
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
